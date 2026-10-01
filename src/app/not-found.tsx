@@ -1,0 +1,12 @@
+import Link from "next/link";
+
+export default function NotFound() {
+  return (
+    <div>
+      <h1 className="text-3xl font-semibold">Không thấy trang</h1>
+      <Link href="/" className="mt-4 inline-block text-clay underline">
+        Về trang chủ
+      </Link>
+    </div>
+  );
+}
