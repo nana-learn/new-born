@@ -1,5 +1,6 @@
 import { checkGroups, lessons, phases, vaccines } from "@/lib/content";
 import { guides } from "@/lib/guides";
+import { months } from "@/lib/months";
 import { terms } from "@/lib/terms";
 import { weeks } from "@/lib/weeks";
 
@@ -33,6 +34,12 @@ export function allHits(): Hit[] {
       title: `${phase.label}: ${phase.title}`,
       kind: "Chặng",
       text: [phase.summary, ...phase.questions].join(" "),
+    })),
+    ...months.map((month) => ({
+      href: `/thang/${month.month}/`,
+      title: `Tháng ${month.month}: ${month.title}`,
+      kind: "Tháng",
+      text: [month.now, ...month.tasks, month.leave].join(" "),
     })),
     ...weeks.map((week) => ({
       href: `/tuan/${week.week}/`,
@@ -69,6 +76,12 @@ export function allHits(): Hit[] {
       title: "Phiếu khám",
       kind: "Sổ",
       text: "huyết áp ngày hẹn cân thuốc bác sĩ dặn ghi lại phòng khám",
+    },
+    {
+      href: "/nguoi-giup/",
+      title: "Người giúp",
+      kind: "Khẩn",
+      text: "ông bà người ở lại ca đêm không đắp lá không kiêng bú 115",
     },
     {
       href: "/so-nha/",

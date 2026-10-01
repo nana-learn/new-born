@@ -7,6 +7,7 @@ import { VaccineDue } from "@/components/vaccine-due";
 import { phaseForBabyDays, phaseForPregnancyWeek, site } from "@/lib/content";
 import { babyTasks } from "@/lib/doses";
 import { guideBySlug, phaseGuideSlugs } from "@/lib/guides";
+import { monthIndex } from "@/lib/months";
 import { weekByNumber } from "@/lib/weeks";
 
 type Mode = "thai" | "be";
@@ -41,18 +42,19 @@ export function TodayCard() {
     if (mode === "thai") {
       const phase = phaseForPregnancyWeek(week);
       const daysLeft = Math.max(0, (site.dueWeek - week) * 7);
-      return { phase, daysLeft, late: week > 42, early: week < 25 };
+      return { phase, daysLeft, late: week > 42, early: week < 25, month: null as number | null };
     }
-    if (!birth) return { phase: undefined, daysLeft: undefined, late: false, early: false };
+    if (!birth) return { phase: undefined, daysLeft: undefined, late: false, early: false, month: null as number | null };
     const born = new Date(`${birth}T00:00:00`);
     const today = new Date();
     const days = Math.floor((today.getTime() - born.getTime()) / 86400000);
-    if (Number.isNaN(days)) return { phase: undefined, daysLeft: undefined, late: false, early: false };
+    if (Number.isNaN(days)) return { phase: undefined, daysLeft: undefined, late: false, early: false, month: null as number | null };
     return {
       phase: phaseForBabyDays(days),
       daysLeft: days,
       late: days > 365,
       early: days < 0,
+      month: monthIndex(born, today),
     };
   }, [mode, week, birth]);
 
@@ -128,6 +130,21 @@ export function TodayCard() {
             <TaskList storageKey={`nam-dau:tuan-${week}`} tasks={weekByNumber(week)?.tasks ?? []} />
           </div>
           <p className="mt-2 text-sm text-alert">Không chờ: {weekByNumber(week)?.watch[0]}</p>
+        </div>
+      ) : null}
+      {mode === "be" ? (
+        <div className="mt-4 flex flex-wrap gap-3 text-sm">
+          {result.month ? (
+            <Link href={`/thang/${result.month}/`} className="text-clay underline decoration-line underline-offset-4">
+              Tháng {result.month}
+            </Link>
+          ) : null}
+          <Link href="/so-nha/" className="text-clay underline decoration-line underline-offset-4">
+            Sổ cân và ca đêm
+          </Link>
+          <Link href="/nguoi-giup/" className="text-clay underline decoration-line underline-offset-4">
+            Trang cho người giúp
+          </Link>
         </div>
       ) : null}
       {mode === "be" && result.phase && babyTasks[result.phase.slug] ? (
