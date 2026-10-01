@@ -1,5 +1,6 @@
 import { checkGroups, lessons, phases, vaccines } from "@/lib/content";
 import { guides } from "@/lib/guides";
+import { terms } from "@/lib/terms";
 import { weeks } from "@/lib/weeks";
 
 export type Hit = {
@@ -69,5 +70,11 @@ export function allHits(): Hit[] {
       kind: "Khẩn",
       text: "sốt co giật khó thở ra máu vỡ ối thai máy giảm cấp cứu",
     },
+    ...terms.map((term) => ({
+      href: `/thuat-ngu/#${term.id}`,
+      title: term.word,
+      kind: "Thuật ngữ",
+      text: `${term.group} ${term.meaning} ${term.ask ?? ""}`,
+    })),
   ];
 }

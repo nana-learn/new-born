@@ -483,6 +483,76 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: "chuyen-da",
+    title: "Chuyển dạ: khi nào đi, rồi chuyện gì xảy ra",
+    when: "Đọc lúc tuần 34, ôn lại tuần 37",
+    lede: "Không có đồng hồ chuẩn cho một ca sinh. Có việc phải đi, việc người hỗ trợ làm, và câu cần hỏi khi họ đề nghị một thủ thuật.",
+    sections: [
+      {
+        heading: "Xuất phát",
+        paragraphs: [
+          "Đi khi có một trong các việc này: cơn co mạnh dần và đều dần, vỡ ối, ra máu, máy giảm, đau đầu dữ dội, sốt, hoặc mẹ thấy có gì đó rất sai. Trước tuần 37, cơn đều là đi khám dù nghĩ chỉ là đau lưng.",
+          "Nhà xa thì đi sớm hơn ngưỡng đọc trên mạng. Hỏi nơi sinh họ muốn mẹ đến khi cơn cách nhau bao lâu, tính cả đường đêm.",
+        ],
+      },
+      {
+        heading: "Ba đoạn, không phải ba hẹn giờ",
+        paragraphs: [
+          "Đoạn mở: cổ tử cung mở dần, cơn co làm việc này. NHS mô tả đoạn này thường kéo khoảng 6–12 giờ ở lần sinh đầu. Đó là khoảng gặp ở Anh, không phải hạn của mẹ.",
+          "Đoạn sổ: bé xuống và ra. NHS nói có thể đến khoảng 3 giờ nếu là con đầu, ngắn hơn nếu đã sinh. Chưa đầy đủ mở mà rặn mạnh theo lời người nhà dễ làm mệt và tổn thương. Rặn khi người đỡ sinh bảo.",
+          "Đoạn nhau: nhau sổ, thường trong khoảng 30 phút theo mô tả của NHS. Vẫn cần người trực. Máu nhiều sau đó thì gọi, không phải vì nhau đã xong nên hết việc.",
+        ],
+      },
+      {
+        heading: "Trong phòng",
+        bullets: [
+          "Hỏi tim bé và cơn co có ổn không sau mỗi lần gắn monitor.",
+          "Hỏi cách giảm đau viện đang có, không giả định có gây tê tủy sống.",
+          "Nếu họ nói rạch, forceps, hút, hoặc mổ: hỏi vì sao lúc này và còn cách nào không. Rồi nghe. Trang mong muốn khi sinh không thắng một ca đang nguy.",
+          "Người hỗ trợ rót nước, ghi giờ vỡ ối, và nhắc câu hỏi. Không mời thêm người vào.",
+        ],
+      },
+      {
+        heading: "Giờ đầu sau sinh",
+        paragraphs: [
+          "Nếu cả hai ổn, hỏi da kề da và bú sớm. Hỏi vitamin K và viêm gan B đã làm chưa trước khi ra về, không phải lúc đang bế bé ra xe.",
+          "Bé không khóc to ngay, hoặc mẹ chóng mặt sau sổ nhau, là việc của người trong phòng. Người nhà đứng sang một bên khi được bảo.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "khoc",
+    title: "Khóc: đói, mệt, hay cần đi khám",
+    when: "Đọc trước tuần 36, mở lại lúc 2 giờ sáng",
+    lede: "Khóc là cách bé nói chưa rõ. Không phải lúc nào cũng là đói, và không phải lúc nào cũng là hư.",
+    sections: [
+      {
+        heading: "Thử theo thứ tự",
+        bullets: [
+          "Đói sớm: mở miệng tìm, liếm môi, đưa tay lên miệng. Khóc là muộn. Cho bú, rồi xem có nuốt không.",
+          "Tã ướt hoặc phân. Lau sạch, để khô nếp.",
+          "Nóng hoặc lạnh: sờ gáy, không sờ bàn tay. Bỏ bớt hoặc thêm một lớp.",
+          "Mệt: bé quay mặt đi, ngáp, nắm tay chặt, khó dỗ hơn khi bị bế đi bế lại trước đèn sáng. Phòng tối, ít lời, nằm ngửa trong nôi nếu đã bú và tã khô.",
+          "Quá nhiều mặt và tiếng: bế ra phòng yên một lúc. Khách có thể đợi.",
+        ],
+      },
+      {
+        heading: "Khóc chiều những tuần đầu",
+        paragraphs: [
+          "Nhiều bé khóc nhiều về chiều và tối, thường đỉnh quanh 6–8 tuần rồi giảm. Bế, đi lại, tiếng ồn đều như máy giặt, và đổi người bế. Không có nghĩa là sữa không đủ nếu cân và tã vẫn ổn.",
+          "Không lắc. Nếu muốn gào, đặt bé ngửa trong nôi, ra khỏi phòng vài phút, rồi quay lại. Gọi người khác.",
+        ],
+      },
+      {
+        heading: "Khóc không phải chỉ là khóc",
+        paragraphs: [
+          "Đi khám nếu khóc kèm sốt, bú kém, nôn, thóp phồng, phát ban, khó thở, hoặc khóc một kiểu chưa từng thấy và không dỗ được. Dưới 3 tháng, sốt đi cùng khóc là đi, không thử thêm một vòng bế.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "an-khi-bau",
     title: "Ăn uống từ tuần 25",
     when: "Giữ đến ngày sinh",
@@ -522,10 +592,10 @@ export function guideBySlug(slug: string) {
 export const phaseGuideSlugs: Record<string, string[]> = {
   "tuan-25-28": ["an-khi-bau", "giay-to", "ke-hoach-sinh"],
   "tuan-29-32": ["ke-hoach-sinh", "nguoi-ho-tro", "nha-an-toan"],
-  "tuan-33-36": ["ke-hoach-sinh", "xuat-vien", "o-cu"],
-  "tuan-37-40": ["xuat-vien", "nguoi-ho-tro", "me-hoi-phuc"],
-  "thang-dau": ["bay-ngay-dau", "cho-bu", "tam-ta", "khi-om", "xuat-vien", "giay-to", "o-cu"],
-  "thang-1-3": ["cho-bu", "tam-ta", "khi-om", "mot-ngay", "me-hoi-phuc"],
+  "tuan-33-36": ["chuyen-da", "ke-hoach-sinh", "xuat-vien", "o-cu"],
+  "tuan-37-40": ["chuyen-da", "xuat-vien", "nguoi-ho-tro", "me-hoi-phuc"],
+  "thang-dau": ["khoc", "bay-ngay-dau", "cho-bu", "tam-ta", "khi-om", "xuat-vien", "giay-to", "o-cu"],
+  "thang-1-3": ["khoc", "cho-bu", "tam-ta", "khi-om", "mot-ngay", "me-hoi-phuc"],
   "thang-3-6": ["khi-om", "mot-ngay", "nha-an-toan"],
   "thang-6-9": ["an-dam", "khi-om", "mot-ngay", "nha-an-toan"],
   "thang-9-12": ["an-dam", "khi-om", "mot-ngay", "nha-an-toan"],

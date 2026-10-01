@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { phaseForBabyDays, phaseForPregnancyWeek, site } from "@/lib/content";
+import { guideBySlug, phaseGuideSlugs } from "@/lib/guides";
+import { weekByNumber } from "@/lib/weeks";
 
 type Mode = "thai" | "be";
 
@@ -114,20 +116,35 @@ export function TodayCard() {
         {result.early && mode === "be" ? <p>Ngày sinh đang ở tương lai.</p> : null}
       </div>
 
+      {mode === "thai" && weekByNumber(week) ? (
+        <div className="mt-4">
+          <p className="text-sm font-medium">Tuần {week}: {weekByNumber(week)?.title}</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">
+            {weekByNumber(week)?.tasks.slice(0, 3).map((task) => (
+              <li key={task}>{task}</li>
+            ))}
+          </ul>
+          <p className="mt-2 text-sm text-alert">Không chờ: {weekByNumber(week)?.watch[0]}</p>
+        </div>
+      ) : null}
       {result.phase ? (
-        <Link
-          href={`/lo-trinh/${result.phase.slug}/`}
-          className="mt-4 block rounded-xl bg-mark px-4 py-3 hover:opacity-90"
-        >
-          <span className="text-xs uppercase tracking-wide text-muted">Chặng nên đọc</span>
-          <span className="mt-1 block font-semibold">
-            {result.phase.label} · {result.phase.title}
-          </span>
-        </Link>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link href={`/lo-trinh/${result.phase.slug}/`} className="rounded-full bg-mark px-3 py-1.5 text-sm">
+            {result.phase.label}
+          </Link>
+          {(phaseGuideSlugs[result.phase.slug] ?? []).slice(0, 2).map((slug) => {
+            const guide = guideBySlug(slug);
+            return guide ? (
+              <Link key={slug} href={`/chi-tiet/${slug}/`} className="rounded-full border border-line px-3 py-1.5 text-sm">
+                {guide.title}
+              </Link>
+            ) : null;
+          })}
+        </div>
       ) : null}
       {mode === "thai" && week >= 25 && week <= 42 ? (
         <Link href={`/tuan/${week}/`} className="mt-3 inline-block text-sm text-clay underline decoration-line underline-offset-4">
-          Việc của tuần {week}
+          Đủ trang tuần {week}
         </Link>
       ) : null}
     </section>

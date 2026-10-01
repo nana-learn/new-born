@@ -24,15 +24,20 @@ export const site = {
   dueWeek: 40,
 };
 
-export const nav = [
-  { href: "/", label: "Trang chủ" },
+export const primaryNav = [
   { href: "/lo-trinh/", label: "Lộ trình" },
-  { href: "/tuan/", label: "Theo tuần" },
+  { href: "/tuan/", label: "Tuần" },
   { href: "/chi-tiet/", label: "Chi tiết" },
+  { href: "/tim/", label: "Tìm" },
+];
+
+export const moreNav = [
   { href: "/chuan-bi/", label: "Chuẩn bị" },
   { href: "/de-y/", label: "Cần để ý" },
   { href: "/tiem-chung/", label: "Tiêm chủng" },
-  { href: "/tim/", label: "Tìm" },
+  { href: "/thuat-ngu/", label: "Thuật ngữ" },
+  { href: "/can-hoc/", label: "Cần học" },
+  { href: "/nguon/", label: "Nguồn" },
 ];
 
 export const phases: Phase[] = [

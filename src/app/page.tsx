@@ -10,10 +10,16 @@ const doors = [
     text: "Việc phải chốt từ tuần 25, túi đi sinh, và những thứ chưa cần mua.",
   },
   {
-    href: "/chi-tiet/",
+    href: "/chi-tiet/chuyen-da/",
     kicker: "Chi tiết",
-    title: "Bú, giấy tờ, bảy ngày đầu",
-    text: "Các trang dài: ngậm, tã, khai sinh, ở cữ, ăn dặm, và việc của người hỗ trợ.",
+    title: "Khi nào đi sinh",
+    text: "Cơn co, vỡ ối, ba đoạn của chuyển dạ, và câu hỏi khi họ đề nghị thủ thuật.",
+  },
+  {
+    href: "/thuat-ngu/",
+    kicker: "Thuật ngữ",
+    title: "Từ nghe ở phòng khám",
+    text: "Ngôi, ối, monitor, sữa non, giấy chứng sinh. Viết lại bằng tiếng thường.",
   },
   {
     href: "/de-y/",
@@ -42,7 +48,7 @@ export default function HomePage() {
         <TodayCard />
       </section>
 
-      <section className="grid gap-3 sm:grid-cols-3">
+      <section className="grid gap-3 sm:grid-cols-2">
         {doors.map((door) => (
           <Link key={door.href} href={door.href} className="rounded-2xl border border-line bg-card p-5 hover:border-clay">
             <p className="text-xs font-medium uppercase tracking-wide text-sage">{door.kicker}</p>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Be_Vietnam_Pro } from "next/font/google";
-import { nav, site } from "@/lib/content";
+import { moreNav, primaryNav, site } from "@/lib/content";
 import "./globals.css";
 
 const sans = Be_Vietnam_Pro({
@@ -34,12 +34,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span className="ml-2 hidden text-sm font-normal text-muted sm:inline">tuần 25 → 12 tháng</span>
             </Link>
             <div className="flex items-center gap-2">
-              <nav className="flex gap-1 overflow-x-auto text-sm">
-                {nav.map((item) => (
+              <nav className="flex items-center gap-1 text-sm">
+                {primaryNav.map((item) => (
                   <Link key={item.href} href={item.href} className="shrink-0 rounded-full px-2.5 py-1 text-muted hover:bg-mark hover:text-ink">
                     {item.label}
                   </Link>
                 ))}
+                <details className="relative">
+                  <summary className="cursor-pointer list-none rounded-full px-2.5 py-1 text-muted hover:bg-mark hover:text-ink [&::-webkit-details-marker]:hidden">
+                    Thêm
+                  </summary>
+                  <div className="absolute right-0 z-50 mt-2 w-44 rounded-xl border border-line bg-card p-1">
+                    {moreNav.map((item) => (
+                      <Link key={item.href} href={item.href} className="block rounded-lg px-3 py-2 text-muted hover:bg-mark hover:text-ink">
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </details>
               </nav>
               <Link href="/khan/" className="shrink-0 rounded-full bg-clay px-3 py-1 text-sm font-medium text-paper">
                 Đi viện
@@ -61,6 +73,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p className="flex flex-wrap gap-x-4">
               <Link href="/khan/" className="underline decoration-line underline-offset-4">
                 Đi viện
+              </Link>
+              <Link href="/thuat-ngu/" className="underline decoration-line underline-offset-4">
+                Thuật ngữ
               </Link>
               <Link href="/can-hoc/" className="underline decoration-line underline-offset-4">
                 Cần học
