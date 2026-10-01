@@ -65,6 +65,12 @@ export function allHits(): Hit[] {
       text: group.items.map((item) => item.text).join(" "),
     })),
     {
+      href: "/phieu-kham/",
+      title: "Phiếu khám",
+      kind: "Sổ",
+      text: "huyết áp ngày hẹn cân thuốc bác sĩ dặn ghi lại phòng khám",
+    },
+    {
       href: "/khan/",
       title: "Đi viện và gọi 115",
       kind: "Khẩn",

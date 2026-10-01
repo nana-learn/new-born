@@ -82,23 +82,30 @@ export default function HomePage() {
       </section>
 
       <section className="rounded-2xl bg-ok-bg p-5 sm:p-6">
-        <h2 className="text-xl font-semibold">Sáu việc của những tuần này</h2>
+        <h2 className="text-xl font-semibold">Nếu chỉ có 20 phút</h2>
         <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-6">
-          <li>Hỏi ngày khám tiếp và xét nghiệm đường huyết nếu chưa làm.</li>
-          <li>Mang sổ tiêm của mẹ, hỏi mũi uốn ván còn thiếu.</li>
-          <li>Hỏi nhóm máu. Nếu Rh âm, hỏi tuần 28 có cần kháng D không.</li>
-          <li>Chọn nơi sinh. Lưu số trực và đi thử đường ban đêm.</li>
-          <li>Bắt đầu để ý nhịp máy của riêng bé. Giảm rõ thì đi khám, không chờ hết ngày.</li>
-          <li>Lập danh sách đồ thiết yếu. Chưa mua hết.</li>
+          <li>Đánh dấu việc ở ô tuần thai phía trên. Ô đó nhớ trên trình duyệt này.</li>
+          <li>
+            <Link href="/phieu-kham/" className="underline decoration-line underline-offset-4">
+              Mở phiếu khám
+            </Link>{" "}
+            và ghi câu chưa hỏi.
+          </li>
+          <li>
+            Chưa chọn nơi sinh thì làm mục{" "}
+            <Link href="/chuan-bi/" className="underline decoration-line underline-offset-4">
+              Chuẩn bị
+            </Link>
+            .
+          </li>
+          <li>
+            Từ tuần 34, đọc{" "}
+            <Link href="/chi-tiet/chuyen-da/" className="underline decoration-line underline-offset-4">
+              khi nào đi sinh
+            </Link>
+            .
+          </li>
         </ol>
-        <div className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
-          <Link href="/lo-trinh/tuan-25-28/" className="text-sage underline decoration-line underline-offset-4">
-            Mở chặng tuần 25–28
-          </Link>
-          <Link href="/tuan/25/" className="text-sage underline decoration-line underline-offset-4">
-            Đọc riêng tuần 25
-          </Link>
-        </div>
       </section>
     </div>
   );

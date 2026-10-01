@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { sectionId } from "@/lib/search";
 import { termGroups, terms } from "@/lib/terms";
 
 export const metadata: Metadata = {
@@ -16,14 +17,14 @@ export default function TermsPage() {
       </p>
       <div className="mt-6 flex flex-wrap gap-2 text-sm">
         {termGroups.map((group) => (
-          <a key={group} href={`#${group}`} className="rounded-full border border-line px-3 py-1 text-muted hover:border-clay hover:text-ink">
+          <a key={group} href={`#${sectionId(group)}`} className="rounded-full border border-line px-3 py-1 text-muted hover:border-clay hover:text-ink">
             {group}
           </a>
         ))}
       </div>
       <div className="mt-8 space-y-10">
         {termGroups.map((group) => (
-          <section key={group} id={group} className="scroll-mt-24">
+          <section key={group} id={sectionId(group)} className="scroll-mt-24">
             <h2 className="text-xl font-semibold">{group}</h2>
             <dl className="mt-3 space-y-3">
               {terms

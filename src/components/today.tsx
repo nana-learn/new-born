@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { TaskList } from "@/components/task-list";
 import { phaseForBabyDays, phaseForPregnancyWeek, site } from "@/lib/content";
 import { guideBySlug, phaseGuideSlugs } from "@/lib/guides";
 import { weekByNumber } from "@/lib/weeks";
@@ -118,13 +119,26 @@ export function TodayCard() {
 
       {mode === "thai" && weekByNumber(week) ? (
         <div className="mt-4">
-          <p className="text-sm font-medium">Tuần {week}: {weekByNumber(week)?.title}</p>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">
-            {weekByNumber(week)?.tasks.slice(0, 3).map((task) => (
-              <li key={task}>{task}</li>
+          <p className="text-sm font-medium">
+            Tuần {week}: {weekByNumber(week)?.title}
+          </p>
+          <div className="mt-2">
+            <TaskList storageKey={`nam-dau:tuan-${week}`} tasks={weekByNumber(week)?.tasks ?? []} />
+          </div>
+          <p className="mt-2 text-sm text-alert">Không chờ: {weekByNumber(week)?.watch[0]}</p>
+        </div>
+      ) : null}
+      {result.phase ? (
+        <div className="mt-4 text-sm leading-6">
+          <p className="font-medium">Mang đi khám</p>
+          <ul className="mt-1 list-disc space-y-1 pl-5 text-muted">
+            {result.phase.questions.slice(0, 2).map((question) => (
+              <li key={question}>{question}</li>
             ))}
           </ul>
-          <p className="mt-2 text-sm text-alert">Không chờ: {weekByNumber(week)?.watch[0]}</p>
+          <Link href="/phieu-kham/" className="mt-2 inline-block text-clay underline decoration-line underline-offset-4">
+            Ghi vào phiếu khám
+          </Link>
         </div>
       ) : null}
       {result.phase ? (

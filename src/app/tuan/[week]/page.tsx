@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { TaskList } from "@/components/task-list";
 import { phaseForPregnancyWeek } from "@/lib/content";
 import { weekByNumber, weeks } from "@/lib/weeks";
 
@@ -37,12 +38,8 @@ export default async function WeekPage({ params }: { params: Promise<{ week: str
         </section>
       </div>
       <section className="mt-4 rounded-2xl bg-ok-bg p-5">
-        <h2 className="font-semibold">Việc tuần này</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6">
-          {week.tasks.map((task) => (
-            <li key={task}>{task}</li>
-          ))}
-        </ul>
+        <TaskList storageKey={`nam-dau:tuan-${week.week}`} tasks={week.tasks} title="Việc tuần này" />
+        <p className="mt-3 text-sm text-muted">Ô đánh dấu lưu trên trình duyệt này, cùng với trang chủ.</p>
       </section>
       <section className="mt-4 rounded-2xl bg-alert-bg p-5">
         <h2 className="font-semibold">Không chờ đến tuần sau</h2>
