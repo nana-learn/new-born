@@ -71,6 +71,12 @@ export function allHits(): Hit[] {
       text: "huyết áp ngày hẹn cân thuốc bác sĩ dặn ghi lại phòng khám",
     },
     {
+      href: "/so-nha/",
+      title: "Sổ nhà: cân và ca đêm",
+      kind: "Sổ",
+      text: "cân gam sụt cân ca đêm người trực đổi ca",
+    },
+    {
       href: "/khan/",
       title: "Đi viện và gọi 115",
       kind: "Khẩn",

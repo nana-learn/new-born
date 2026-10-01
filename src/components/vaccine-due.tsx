@@ -75,7 +75,13 @@ export function VaccineDue({ birth, compact = false }: { birth: string; compact?
     checked: Boolean(done[dose.id]),
   }));
   const visible = compact
-    ? rows.filter((row) => !row.checked && (row.state === "soon" || row.state === "due" || row.state === "late")).slice(0, 5)
+    ? rows
+        .filter((row) => {
+          if (row.checked) return false;
+          if (row.dose.id === "vnnb-2" && !done["vnnb-1"] && row.state !== "late") return false;
+          return row.state === "soon" || row.state === "due" || row.state === "late";
+        })
+        .slice(0, 5)
     : rows;
 
   if (!validBirth) {
@@ -95,7 +101,7 @@ export function VaccineDue({ birth, compact = false }: { birth: string; compact?
               <input type="checkbox" className="mt-1 h-4 w-4 accent-sage" checked={checked} onChange={() => toggle(dose.id)} />
               <span>
                 <span className={`block text-sm font-medium ${checked ? "text-muted line-through" : ""}`}>{dose.label}</span>
-                {state && !checked ? <StateLine state={state} /> : null}
+                {state && !checked ? <StateLine state={state} doseId={dose.id} done={done} /> : null}
                 {!compact ? <span className="mt-1 block text-sm leading-6 text-muted">{dose.detail}</span> : null}
               </span>
             </label>
@@ -116,7 +122,9 @@ export function VaccineDue({ birth, compact = false }: { birth: string; compact?
   );
 }
 
-function StateLine({ state }: { state: DoseState }) {
-  const tone = state === "late" || state === "due" ? "text-alert" : "text-sage";
-  return <span className={`block text-sm ${tone}`}>{doseStateLabel[state]}</span>;
+function StateLine({ state, doseId, done }: { state: DoseState; doseId: string; done: Record<string, boolean> }) {
+  const waitingOnFirst = doseId === "vnnb-2" && !done["vnnb-1"] && state !== "late";
+  const tone = !waitingOnFirst && (state === "late" || state === "due") ? "text-alert" : "text-sage";
+  const label = waitingOnFirst ? "Sau mũi 1 khoảng 1–2 tuần" : doseStateLabel[state];
+  return <span className={`block text-sm ${tone}`}>{label}</span>;
 }

@@ -33,6 +33,7 @@ export const primaryNav = [
 
 export const moreNav = [
   { href: "/phieu-kham/", label: "Phiếu khám" },
+  { href: "/so-nha/", label: "Sổ nhà" },
   { href: "/chuan-bi/", label: "Chuẩn bị" },
   { href: "/de-y/", label: "Cần để ý" },
   { href: "/tiem-chung/", label: "Tiêm chủng" },

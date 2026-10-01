@@ -135,6 +135,11 @@ export function TodayCard() {
           <TaskList storageKey={`nam-dau:be-${result.phase.slug}`} tasks={babyTasks[result.phase.slug]} title="Việc chặng này" />
         </div>
       ) : null}
+      {mode === "be" ? (
+        <Link href="/so-nha/" className="mt-4 inline-block text-sm text-clay underline decoration-line underline-offset-4">
+          Sổ cân và ca đêm
+        </Link>
+      ) : null}
       {mode === "be" && birth ? (
         <div className="mt-4">
           <p className="text-sm font-medium">Tiêm theo ngày sinh</p>
@@ -144,8 +149,8 @@ export function TodayCard() {
         </div>
       ) : null}
       {result.phase ? (
-        <div className="mt-4 text-sm leading-6">
-          <p className="font-medium">Mang đi khám</p>
+        <details className="mt-4 text-sm leading-6">
+          <summary className="cursor-pointer font-medium">Mang đi khám</summary>
           <ul className="mt-1 list-disc space-y-1 pl-5 text-muted">
             {result.phase.questions.slice(0, 2).map((question) => (
               <li key={question}>{question}</li>
@@ -154,7 +159,7 @@ export function TodayCard() {
           <Link href="/phieu-kham/" className="mt-2 inline-block text-clay underline decoration-line underline-offset-4">
             Ghi vào phiếu khám
           </Link>
-        </div>
+        </details>
       ) : null}
       {result.phase ? (
         <div className="mt-4 flex flex-wrap gap-2">
