@@ -10,10 +10,10 @@ const doors = [
     text: "Việc phải chốt từ tuần 25, túi đi sinh, và những thứ chưa cần mua.",
   },
   {
-    href: "/can-hoc/",
-    kicker: "Cần học",
-    title: "Bú, ngủ, chuyển dạ, ăn dặm",
-    text: "Những kỹ năng đọc trước một lần, rồi nhờ người được đào tạo xem lại khi làm thật.",
+    href: "/chi-tiet/",
+    kicker: "Chi tiết",
+    title: "Bú, giấy tờ, bảy ngày đầu",
+    text: "Các trang dài: ngậm, tã, khai sinh, ở cữ, ăn dặm, và việc của người hỗ trợ.",
   },
   {
     href: "/de-y/",
@@ -82,9 +82,14 @@ export default function HomePage() {
           <li>Bắt đầu để ý nhịp máy của riêng bé. Giảm rõ thì đi khám, không chờ hết ngày.</li>
           <li>Lập danh sách đồ thiết yếu. Chưa mua hết.</li>
         </ol>
-        <Link href="/lo-trinh/tuan-25-28/" className="mt-4 inline-block text-sm font-medium text-sage underline decoration-line underline-offset-4">
-          Mở chặng tuần 25–28
-        </Link>
+        <div className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
+          <Link href="/lo-trinh/tuan-25-28/" className="text-sage underline decoration-line underline-offset-4">
+            Mở chặng tuần 25–28
+          </Link>
+          <Link href="/tuan/25/" className="text-sage underline decoration-line underline-offset-4">
+            Đọc riêng tuần 25
+          </Link>
+        </div>
       </section>
     </div>
   );

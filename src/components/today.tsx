@@ -125,6 +125,11 @@ export function TodayCard() {
           </span>
         </Link>
       ) : null}
+      {mode === "thai" && week >= 25 && week <= 42 ? (
+        <Link href={`/tuan/${week}/`} className="mt-3 inline-block text-sm text-clay underline decoration-line underline-offset-4">
+          Việc của tuần {week}
+        </Link>
+      ) : null}
     </section>
   );
 }

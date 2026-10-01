@@ -27,8 +27,9 @@ export const site = {
 export const nav = [
   { href: "/", label: "Trang chủ" },
   { href: "/lo-trinh/", label: "Lộ trình" },
+  { href: "/tuan/", label: "Theo tuần" },
+  { href: "/chi-tiet/", label: "Chi tiết" },
   { href: "/chuan-bi/", label: "Chuẩn bị" },
-  { href: "/can-hoc/", label: "Cần học" },
   { href: "/de-y/", label: "Cần để ý" },
   { href: "/tiem-chung/", label: "Tiêm chủng" },
 ];
@@ -686,6 +687,18 @@ export const checkGroups: CheckGroup[] = [
     ],
   },
   {
+    id: "hoi-vien",
+    title: "Hỏi khi xem nơi sinh",
+    items: [
+      { id: "cua-dem", text: "Cửa nào mở ban đêm, đỗ xe ở đâu, gọi số nào khi đang trên đường." },
+      { id: "o-lai", text: "Ai được ở lại qua đêm, có giường hoặc ghế cho người hỗ trợ không." },
+      { id: "da-ke-da", text: "Da kề da và bú trong giờ đầu có là việc thường làm nếu mẹ và bé ổn không." },
+      { id: "vitamin-k", text: "Vitamin K và viêm gan B làm lúc nào, sổ ghi ở đâu trước khi xuất viện." },
+      { id: "chi-phi", text: "Chi phí dự kiến, khoản nào BHYT không trả, đặt cọc bao nhiêu." },
+      { id: "sang-loc", text: "Sàng lọc sau sinh họ làm những gì: tai, mắt, suy giáp, G6PD, hay chỉ khám lâm sàng." },
+    ],
+  },
+  {
     id: "chua-mua",
     title: "Chưa cần mua",
     intro: "Tiền để dành cho khám, tiêm dịch vụ nếu bác sĩ chỉ định, và người hỗ trợ có ích hơn tủ đồ.",
@@ -929,6 +942,31 @@ export const sources = [
     title: "CDC — Sleep safely",
     href: "https://www.cdc.gov/sudden-infant-death/sleep-safely/index.html",
     note: "Cùng các điểm ngủ an toàn, và không dùng chỗ ngồi trên xe làm giường.",
+  },
+  {
+    title: "CDC — Newborn breastfeeding basics",
+    href: "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/newborn-basics.html",
+    note: "8–12 cữ bú trong 24 giờ, về cân lúc sinh vào ngày 10–14, ngưỡng tã ở ngày 5, dấu hiệu ngậm.",
+  },
+  {
+    title: "AAP — How to tell if your breastfed baby is getting enough milk",
+    href: "https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/How-to-Tell-If-Baby-Is-Getting-Enough-Milk.aspx",
+    note: "Sụt không quá khoảng 8–10% cân lúc sinh, 6 tã ướt và phân vàng đến ngày 5–7, khám lại sớm sau xuất viện.",
+  },
+  {
+    title: "NHS — tuần 25, 28, 32 và 36",
+    href: "https://www.nhs.uk/pregnancy/week-by-week/",
+    note: "Các mốc cơ thể, calo, chiều dài ước tính, và xoay ngôi được ghi rõ là số của NHS, không phải mục tiêu của bé nhà mình. Lịch tiêm mẹ của Anh không tự áp vào Việt Nam.",
+  },
+  {
+    title: "Bộ luật Lao động 2019, điều 139",
+    href: "https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Law-45-2019-QH14-Labor-Code-432162.aspx",
+    note: "Nghỉ thai sản 6 tháng, phần trước sinh không quá 2 tháng. Giấy tờ lương và bảo hiểm hỏi phòng nhân sự.",
+  },
+  {
+    title: "Nghị định 63/2024/NĐ-CP",
+    href: "https://xaydungchinhsach.chinhphu.vn/quy-dinh-ho-so-lien-thong-cac-tthc-dang-ky-khai-sinh-dang-ky-thuong-tru-cap-the-bhyt-cho-tre-duoi-6-tuoi-119240610195610738.htm",
+    note: "Liên thông khai sinh, thường trú và BHYT trẻ dưới 6 tuổi. Lúc làm, theo mẫu trên dichvucong.gov.vn hoặc VNeID vì văn bản sau có thể sửa chi tiết.",
   },
   {
     title: "CDC — Developmental milestones",

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { adjacentPhases, phaseBySlug, phases, type Item } from "@/lib/content";
+import { guideBySlug, phaseGuideSlugs } from "@/lib/guides";
+import { weeks } from "@/lib/weeks";
 
 export function generateStaticParams() {
   return phases.map((phase) => ({ slug: phase.slug }));
@@ -35,6 +37,13 @@ export default async function PhasePage({ params }: { params: Promise<{ slug: st
   const phase = phaseBySlug(slug);
   if (!phase) notFound();
   const { prev, next } = adjacentPhases(slug);
+  const relatedWeeks =
+    phase.kind === "thai" && phase.fromWeek && phase.toWeek
+      ? weeks.filter((week) => week.week >= phase.fromWeek! && week.week <= Math.min(phase.toWeek!, 42))
+      : [];
+  const relatedGuides = (phaseGuideSlugs[slug] ?? [])
+    .map((item) => guideBySlug(item))
+    .filter((item) => item !== undefined);
 
   return (
     <article>
@@ -46,6 +55,31 @@ export default async function PhasePage({ params }: { params: Promise<{ slug: st
         <Column title="Cần học" items={phase.learn} tone="text-clay" />
         <Column title="Cần để ý" items={phase.notice} tone="text-alert" />
       </div>
+      {relatedWeeks.length > 0 || relatedGuides.length > 0 ? (
+        <section className="mt-4 rounded-2xl border border-line bg-card p-5">
+          <h2 className="font-semibold">Đọc thêm trong chặng này</h2>
+          {relatedWeeks.length > 0 ? (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {relatedWeeks.map((week) => (
+                <Link key={week.week} href={`/tuan/${week.week}/`} className="rounded-full border border-line px-3 py-1 text-sm hover:border-clay">
+                  Tuần {week.week}
+                </Link>
+              ))}
+            </div>
+          ) : null}
+          {relatedGuides.length > 0 ? (
+            <ul className="mt-4 space-y-2 text-sm">
+              {relatedGuides.map((guide) => (
+                <li key={guide.slug}>
+                  <Link href={`/chi-tiet/${guide.slug}/`} className="underline decoration-line underline-offset-4">
+                    {guide.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </section>
+      ) : null}
       <section className="mt-4 rounded-2xl bg-mark p-5">
         <h2 className="font-semibold">Mang vào phòng khám</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6">

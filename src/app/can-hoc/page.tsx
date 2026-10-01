@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { lessons } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Cần học" };
@@ -9,7 +10,11 @@ export default function LearnPage() {
       <p className="text-sm font-medium text-clay">Cần học</p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight">Đọc trước, nhờ người biết xem lại</h1>
       <p className="mt-3 max-w-2xl leading-7 text-muted">
-        Cho bú, ngủ, và sơ cứu không nên học một mình từ một trang web rồi coi là xong. Trang này chỉ để biết phải hỏi gì, và hỏi ai.
+        Cho bú, ngủ, và sơ cứu không nên học một mình từ một trang web rồi coi là xong. Trang này chỉ để biết phải hỏi gì, và hỏi ai. Phần dài hơn nằm ở{" "}
+        <Link href="/chi-tiet/" className="underline decoration-line underline-offset-4">
+          Chi tiết
+        </Link>
+        .
       </p>
       <div className="mt-8 space-y-4">
         {lessons.map((lesson) => (

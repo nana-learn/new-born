@@ -1,6 +1,6 @@
 # Năm đầu
 
-Sổ tay tiếng Việt cho gia đình đang ở tuần thai 25, theo đến hết 12 tháng tuổi: việc cần chuẩn bị, cần học, và cần để ý.
+Sổ tay tiếng Việt cho gia đình đang ở tuần thai 25, theo đến hết 12 tháng tuổi: lộ trình, từng tuần đến tuần 42, và các trang chi tiết về bú, giấy tờ, ở cữ, ăn dặm.
 
 Site: https://nana-learn.github.io/new-born/
 
