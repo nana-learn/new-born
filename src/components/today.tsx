@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { TaskList } from "@/components/task-list";
+import { VaccineDue } from "@/components/vaccine-due";
 import { phaseForBabyDays, phaseForPregnancyWeek, site } from "@/lib/content";
+import { babyTasks } from "@/lib/doses";
 import { guideBySlug, phaseGuideSlugs } from "@/lib/guides";
 import { weekByNumber } from "@/lib/weeks";
 
@@ -126,6 +128,19 @@ export function TodayCard() {
             <TaskList storageKey={`nam-dau:tuan-${week}`} tasks={weekByNumber(week)?.tasks ?? []} />
           </div>
           <p className="mt-2 text-sm text-alert">Không chờ: {weekByNumber(week)?.watch[0]}</p>
+        </div>
+      ) : null}
+      {mode === "be" && result.phase && babyTasks[result.phase.slug] ? (
+        <div className="mt-4">
+          <TaskList storageKey={`nam-dau:be-${result.phase.slug}`} tasks={babyTasks[result.phase.slug]} title="Việc chặng này" />
+        </div>
+      ) : null}
+      {mode === "be" && birth ? (
+        <div className="mt-4">
+          <p className="text-sm font-medium">Tiêm theo ngày sinh</p>
+          <div className="mt-2">
+            <VaccineDue birth={birth} compact />
+          </div>
         </div>
       ) : null}
       {result.phase ? (

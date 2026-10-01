@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { VaccineTracker } from "@/components/vaccine-due";
 import { motherVaccine, vaccines } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Tiêm chủng" };
@@ -11,6 +12,13 @@ export default function VaccinePage() {
       <p className="mt-3 max-w-2xl leading-7 text-muted">
         Theo Thông tư 10/2024/TT-BYT và bảng minh họa của HCDC. Khoảng cách một tháng được tính ít nhất 28 ngày. Trạm có thể tiêm mũi phối hợp, nên tên trên sổ có thể khác tên bệnh trong bảng. Mũi dịch vụ không nằm trong bảng này — hỏi bác sĩ nhi nếu được đề nghị, và hỏi vì sao.
       </p>
+      <section className="mt-6 rounded-2xl border border-line bg-card p-5">
+        <h2 className="font-semibold">Mũi đến tuổi</h2>
+        <p className="mt-2 text-sm leading-6 text-muted">Nhắc theo ngày sinh đã nhập ở trang chủ. Không thay sổ tiêm của trạm.</p>
+        <div className="mt-3">
+          <VaccineTracker />
+        </div>
+      </section>
       <article className="mt-6 rounded-2xl bg-mark p-5">
         <h2 className="font-semibold">{motherVaccine.title}</h2>
         <p className="mt-2 text-sm leading-7">{motherVaccine.body}</p>

@@ -483,6 +483,36 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: "bom-sua",
+    title: "Bế, vỗ hơi, và bú dồn",
+    when: "Tuần đầu, nhất là buổi tối",
+    lede: "Ba việc hay bị lẫn: bế thế nào cho đỡ cổ, khi nào cần vỗ hơi, và bú liên tục buổi tối có phải là hết sữa không.",
+    sections: [
+      {
+        heading: "Bế",
+        bullets: [
+          "Một tay đỡ đầu và cổ, tay kia đỡ mông. Bé sơ sinh chưa giữ được đầu.",
+          "Khi đưa bé cho người khác, đợi họ đặt tay đỡ đầu rồi mới thả.",
+          "Không lắc để dỗ. Không tung lên.",
+        ],
+      },
+      {
+        heading: "Vỗ hơi",
+        paragraphs: [
+          "Dựng bé vào vai, hoặc cho ngồi trên đùi với một tay đỡ đầu và ngực. Vỗ hoặc xoa lưng nhẹ. Không phải bé nào cũng ợ sau mỗi cữ. Vài phút là đủ nếu bé đã dễ chịu.",
+          "Sữa trào ra mũi miệng mà bé vẫn ho, khóc được: dựng ngồi, lau. Không khóc được, không thở được: gọi 115. Đừng tự làm động tác sơ cứu chưa học.",
+        ],
+      },
+      {
+        heading: "Bú dồn buổi tối",
+        paragraphs: [
+          "Những tuần đầu, nhiều bé đòi bú liên tiếp về chiều và tối rồi ngủ một quãng ngắn. Một mình việc đó không chứng minh sữa ít, nếu tã và đường cân vẫn ổn.",
+          "Người không trực thì đi ngủ. Đổi người bế giữa các cữ nếu cả hai đang kiệt.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "chuyen-da",
     title: "Chuyển dạ: khi nào đi, rồi chuyện gì xảy ra",
     when: "Đọc lúc tuần 34, ôn lại tuần 37",
@@ -594,7 +624,7 @@ export const phaseGuideSlugs: Record<string, string[]> = {
   "tuan-29-32": ["ke-hoach-sinh", "nguoi-ho-tro", "nha-an-toan"],
   "tuan-33-36": ["chuyen-da", "ke-hoach-sinh", "xuat-vien", "o-cu"],
   "tuan-37-40": ["chuyen-da", "xuat-vien", "nguoi-ho-tro", "me-hoi-phuc"],
-  "thang-dau": ["khoc", "bay-ngay-dau", "cho-bu", "tam-ta", "khi-om", "xuat-vien", "giay-to", "o-cu"],
+  "thang-dau": ["bom-sua", "khoc", "bay-ngay-dau", "cho-bu", "tam-ta", "khi-om", "xuat-vien", "giay-to", "o-cu"],
   "thang-1-3": ["khoc", "cho-bu", "tam-ta", "khi-om", "mot-ngay", "me-hoi-phuc"],
   "thang-3-6": ["khi-om", "mot-ngay", "nha-an-toan"],
   "thang-6-9": ["an-dam", "khi-om", "mot-ngay", "nha-an-toan"],
