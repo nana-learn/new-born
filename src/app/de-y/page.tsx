@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { babyAlerts, motherAlerts, watchNotPanic } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Cần để ý" };
@@ -9,7 +10,11 @@ export default function NoticePage() {
       <p className="text-sm font-medium text-clay">Cần để ý</p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight">Đi viện khi có các dấu này</h1>
       <p className="mt-3 max-w-2xl leading-7 text-muted">
-        Danh sách không đầy đủ mọi bệnh. Nếu bố mẹ thấy có gì đó rất sai, đó đã là lý do đi. Số cấp cứu: 115.
+        Danh sách không đầy đủ mọi bệnh. Nếu bố mẹ thấy có gì đó rất sai, đó đã là lý do đi. Bản ngắn để chụp nằm ở{" "}
+        <Link href="/khan/" className="underline decoration-line underline-offset-4">
+          trang Đi viện
+        </Link>
+        . Số cấp cứu: 115.
       </p>
       <div className="mt-8 grid gap-4 lg:grid-cols-2">
         <section className="rounded-2xl bg-alert-bg p-5">

@@ -32,6 +32,7 @@ export const nav = [
   { href: "/chuan-bi/", label: "Chuẩn bị" },
   { href: "/de-y/", label: "Cần để ý" },
   { href: "/tiem-chung/", label: "Tiêm chủng" },
+  { href: "/tim/", label: "Tìm" },
 ];
 
 export const phases: Phase[] = [

@@ -33,13 +33,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {site.name}
               <span className="ml-2 hidden text-sm font-normal text-muted sm:inline">tuần 25 → 12 tháng</span>
             </Link>
-            <nav className="flex gap-1 overflow-x-auto text-sm">
-              {nav.map((item) => (
-                <Link key={item.href} href={item.href} className="shrink-0 rounded-full px-2.5 py-1 text-muted hover:bg-mark hover:text-ink">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
+            <div className="flex items-center gap-2">
+              <nav className="flex gap-1 overflow-x-auto text-sm">
+                {nav.map((item) => (
+                  <Link key={item.href} href={item.href} className="shrink-0 rounded-full px-2.5 py-1 text-muted hover:bg-mark hover:text-ink">
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+              <Link href="/khan/" className="shrink-0 rounded-full bg-clay px-3 py-1 text-sm font-medium text-paper">
+                Đi viện
+              </Link>
+            </div>
           </div>
         </header>
         <main id="noi-dung" className="mx-auto max-w-5xl px-4 py-8">
@@ -54,6 +59,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Mốc gốc của trang: tuần thai 25. Ngày dự sinh là ước tính quanh tuần 40.
             </p>
             <p className="flex flex-wrap gap-x-4">
+              <Link href="/khan/" className="underline decoration-line underline-offset-4">
+                Đi viện
+              </Link>
+              <Link href="/can-hoc/" className="underline decoration-line underline-offset-4">
+                Cần học
+              </Link>
               <Link href="/nguon/" className="underline decoration-line underline-offset-4">
                 Nguồn
               </Link>

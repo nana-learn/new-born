@@ -392,6 +392,127 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "tam-ta",
+    title: "Tắm, tã, rốn, quần áo",
+    when: "Làm trong tháng đầu, ôn lại khi bé lẫy",
+    lede: "Việc này lặp lại nhiều lần trong ngày. Làm chậm, giữ một tay ở bé, và không thêm sản phẩm cho đủ bộ.",
+    sections: [
+      {
+        heading: "Tắm",
+        paragraphs: [
+          "Khi rốn chưa rụng, lau người là đủ. Chậu ngập nước dễ làm rốn ướt lâu. Rốn rụng và khô thì mới tắm chậu.",
+          "Phòng ấm, không gió. Nước ấm khi thử bằng mặt trong cổ tay, không phải bằng tay người lớn đã quen nóng. Không rót thêm nước nóng khi bé đang ở trong chậu.",
+          "Không rời bé để lấy khăn. Nếu quên khăn, bế bé theo, ướt một chút còn hơn để bé một mình với nước.",
+        ],
+        bullets: [
+          "Lau mặt bằng nước sạch trước, rồi người, vùng tã sau cùng.",
+          "Đỡ đầu và cổ. Bé trơn.",
+          "Không ngoáy tăm bông vào tai hay mũi.",
+          "Xà phòng dịu, ít, không phải mỗi ngày nếu da khô. Không dùng sữa tắm người lớn.",
+          "Không rắc phấn. Phấn hít vào phổi nguy hơn là da có vài nếp ẩm.",
+        ],
+      },
+      {
+        heading: "Tã và hăm",
+        bullets: [
+          "Lau từ trước ra sau, nhất là với bé gái, để phân không vào vùng tiểu.",
+          "Lau khô nếp trước khi đóng tã. Tã không cần chặt đến mức hằn đùi.",
+          "Đỏ nhẹ: để hở vài phút, thoa kem chống hăm nếu da còn nguyên. Hỏi loại kem tại trạm nếu chưa dùng bao giờ.",
+          "Da trợt, mụn mủ, hoặc không đỡ sau hai ngày: khám. Không tự bôi thuốc người lớn.",
+          "Phân lỏng kéo dài kèm bú kém không phải chỉ do hăm. Xem trang khi ốm.",
+        ],
+      },
+      {
+        heading: "Rốn",
+        paragraphs: [
+          "Giữ khô, gấp tã xuống dưới, không đắp gì. Bệnh viện dặn dung dịch nào thì chỉ dùng đúng thứ đó. Không thay bằng rượu thuốc hay lá.",
+          "Rụng thường trong một đến hai tuần, có thể lâu hơn. Hơi dính thì thấm khô. Đỏ lan ra da bụng, mủ, mùi hôi, hoặc chảy máu hơn vài giọt: đi khám.",
+        ],
+      },
+      {
+        heading: "Nóng và quần áo",
+        paragraphs: [
+          "Ở nhà nóng, một lớp mỏng là đủ. Sờ gáy bé: ẩm và ấm là ổn, đẫm mồ hôi hoặc lạnh là sai lớp. Tay chân lạnh không chứng minh người bé lạnh.",
+          "Không đội mũ khi ngủ trong nhà nếu không có chỉ định. Quạt để thông khí, không thổi thẳng vào mặt. Ngủ màn. Không xịt muỗi sát da bé.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "khi-om",
+    title: "Khi ốm: gọi ai, nói gì, không tự cho gì",
+    when: "Đọc trước, mở lại lúc sốt",
+    lede: "Trang Cần để ý nói khi nào đi. Trang này nói cách gọi và những việc không làm trong lúc chờ.",
+    sections: [
+      {
+        heading: "Gọi 115 hay tự đi",
+        paragraphs: [
+          "Gọi 115 nếu bé không thở, tím, co giật, không đánh thức được, hoặc mẹ ngất, co giật, ra máu nhiều. Nói địa chỉ trước, việc đang xảy ra sau.",
+          "Tự đi nếu còn thở đều, còn tỉnh, nhưng có dấu hiệu ở trang Đi viện: sốt ở trẻ dưới 3 tháng, bú kém, thở nhanh, vàng da đậm, nôn mọi thứ. Đi thẳng, đừng ghé nhà thuốc mua trước.",
+        ],
+      },
+      {
+        heading: "Nói gì khi gọi hoặc khi vào viện",
+        bullets: [
+          "Tuần thai của mẹ, hoặc ngày sinh và cân lúc sinh của bé.",
+          "Việc bắt đầu lúc mấy giờ, đang nặng lên hay đứng yên.",
+          "Nhiệt độ nếu đã đo, đo ở đâu, lúc nào. Không đoán bằng môi.",
+          "Cữ bú hoặc ăn gần nhất, số tã ướt hôm nay.",
+          "Đã nhỏ, bôi, hoặc uống thứ gì, lúc mấy giờ. Mang vỏ thuốc theo.",
+          "Sổ tiêm, giấy xuất viện, dị ứng nếu biết.",
+        ],
+      },
+      {
+        heading: "Không tự làm",
+        bullets: [
+          "Không cho thuốc hạ sốt của người lớn, và không cho aspirin cho trẻ em.",
+          "Không lau người bằng cồn. Làm bé lạnh thêm và cồn có thể thấm qua da.",
+          "Không đắp lá, không cạo gió trẻ dưới một tuổi.",
+          "Không nhỏ mũi, nhỏ mắt, hay bôi kháng sinh còn lại trong nhà.",
+          "Dưới 3 tháng, sốt là đi khám, không phải chờ thuốc nhà có tác dụng.",
+        ],
+      },
+      {
+        heading: "Sau tiêm",
+        paragraphs: [
+          "Sưng chỗ tiêm, quấy, sốt nhẹ trong ngày có thể gặp. Cho bú đủ, không đắp đùi quá chặt.",
+          "Sốt cao, co giật, khó thở, phát ban lan nhanh, khóc không dỗ được, hoặc bố mẹ thấy không yên: đi, mang sổ tiêm. Đừng kết luận là phản ứng thường vì mới tiêm hôm qua.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "an-khi-bau",
+    title: "Ăn uống từ tuần 25",
+    when: "Giữ đến ngày sinh",
+    lede: "Không cần thực đơn đặc biệt. Cần đủ bữa, đồ chín, và không thêm vitamin liều cao vì thấy người khác uống.",
+    sections: [
+      {
+        heading: "Bữa thường",
+        paragraphs: [
+          "NHS nói tam cá nguyệt ba có thể cần thêm khoảng 200 kcal mỗi ngày, không phải ăn gấp đôi. Đó là mốc của họ. Mẹ ăn khi đói, uống khi khát, và nói với bác sĩ nếu nghén trở lại đến mức bỏ bữa.",
+          "Cơm, rau rửa sạch, trứng và thịt nấu chín, đậu, sữa đã tiệt trùng, trái cây gọt vỏ. Cá nhỏ nấu chín thường là bữa bình thường. Cá lớn ăn thịt cá khác thì hỏi bác sĩ, vì thủy ngân.",
+        ],
+      },
+      {
+        heading: "Nên tránh",
+        bullets: [
+          "Rượu, bia, và khói thuốc, kể cả khói người khác.",
+          "Tiết canh, gỏi sống, trứng lòng đào, sữa chưa tiệt trùng, pate chưa nấu lại.",
+          "Thuốc cảm, thuốc đông y, và vitamin A liều cao tự mua. Không uống viên gan hay viên vitamin của người khác.",
+          "Caffeine: nhiều hướng dẫn khuyên giới hạn, khoảng dưới 200 mg một ngày. Hỏi bác sĩ của mẹ, không cộng trà, cà phê và nước ngọt rồi tự thấy vẫn ổn.",
+        ],
+      },
+      {
+        heading: "Ợ nóng và chuột rút",
+        paragraphs: [
+          "Bữa nhỏ, không nằm ngay sau khi ăn, hạn chế đồ nhiều dầu. Chuột rút chân: duỗi nhẹ, nói lúc khám nếu đêm nào cũng xảy ra. Không tự mua canxi liều cao.",
+          "Đau thượng vị dữ dội, nôn không giữ được nước, hoặc không đi tiểu: đó không còn là ợ nóng. Đi khám.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {
@@ -399,13 +520,13 @@ export function guideBySlug(slug: string) {
 }
 
 export const phaseGuideSlugs: Record<string, string[]> = {
-  "tuan-25-28": ["giay-to", "ke-hoach-sinh"],
+  "tuan-25-28": ["an-khi-bau", "giay-to", "ke-hoach-sinh"],
   "tuan-29-32": ["ke-hoach-sinh", "nguoi-ho-tro", "nha-an-toan"],
   "tuan-33-36": ["ke-hoach-sinh", "xuat-vien", "o-cu"],
   "tuan-37-40": ["xuat-vien", "nguoi-ho-tro", "me-hoi-phuc"],
-  "thang-dau": ["bay-ngay-dau", "cho-bu", "xuat-vien", "giay-to", "o-cu"],
-  "thang-1-3": ["cho-bu", "mot-ngay", "me-hoi-phuc"],
-  "thang-3-6": ["mot-ngay", "nha-an-toan"],
-  "thang-6-9": ["an-dam", "mot-ngay", "nha-an-toan"],
-  "thang-9-12": ["an-dam", "mot-ngay", "nha-an-toan"],
+  "thang-dau": ["bay-ngay-dau", "cho-bu", "tam-ta", "khi-om", "xuat-vien", "giay-to", "o-cu"],
+  "thang-1-3": ["cho-bu", "tam-ta", "khi-om", "mot-ngay", "me-hoi-phuc"],
+  "thang-3-6": ["khi-om", "mot-ngay", "nha-an-toan"],
+  "thang-6-9": ["an-dam", "khi-om", "mot-ngay", "nha-an-toan"],
+  "thang-9-12": ["an-dam", "khi-om", "mot-ngay", "nha-an-toan"],
 };

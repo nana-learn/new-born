@@ -26,6 +26,9 @@ const doors = [
 export default function HomePage() {
   return (
     <div className="space-y-10">
+      <Link href="/khan/" className="block rounded-2xl bg-alert-bg px-4 py-3 text-sm leading-6">
+        <span className="font-semibold">Đi viện hoặc gọi 115</span> nếu ra máu, vỡ ối, máy giảm, sốt ở trẻ dưới 3 tháng, khó thở, hoặc co giật. Một trang để chụp màn hình.
+      </Link>
       <section className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr] lg:items-end">
         <div>
           <p className="text-sm font-medium text-clay">Đang ở tuần 25</p>

@@ -54,3 +54,20 @@ body {
 ::selection {
   background: var(--mark);
 }
+
+@media print {
+  header,
+  footer,
+  nav {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
