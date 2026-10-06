@@ -41,6 +41,7 @@ export const moreNav = [
   { href: "/tiem-chung/", label: "Tiêm chủng" },
   { href: "/thuat-ngu/", label: "Thuật ngữ" },
   { href: "/can-hoc/", label: "Cần học" },
+  { href: "/sach/", label: "Sách" },
   { href: "/nguon/", label: "Nguồn" },
 ];
 

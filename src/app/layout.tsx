@@ -77,6 +77,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/thuat-ngu/" className="underline decoration-line underline-offset-4">
                 Thuật ngữ
               </Link>
+              <Link href="/sach/" className="underline decoration-line underline-offset-4">
+                Sách
+              </Link>
               <Link href="/can-hoc/" className="underline decoration-line underline-offset-4">
                 Cần học
               </Link>

@@ -14,6 +14,10 @@ export default function LearnPage() {
         <Link href="/chi-tiet/" className="underline decoration-line underline-offset-4">
           Chi tiết
         </Link>
+        . Sách tiếng Anh nên đọc nằm ở{" "}
+        <Link href="/sach/" className="underline decoration-line underline-offset-4">
+          Sách
+        </Link>
         .
       </p>
       <div className="mt-8 space-y-4">

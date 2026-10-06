@@ -90,6 +90,12 @@ export function allHits(): Hit[] {
       text: "cân gam sụt cân ca đêm người trực đổi ca",
     },
     {
+      href: "/sach/",
+      title: "Sách nên đọc",
+      kind: "Sách",
+      text: "Heading Home With Your Newborn Your Baby's First Year Happiest Baby Breastfeeding Made Simple Cribsheet Baby Whisperer EASY Tracy Hogg",
+    },
+    {
       href: "/khan/",
       title: "Đi viện và gọi 115",
       kind: "Khẩn",
