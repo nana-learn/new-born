@@ -393,7 +393,8 @@ export const phases: Phase[] = [
           "Mốc là việc khoảng 75% trẻ làm được, không phải hạn chót. Bé sinh non tính theo tuổi hiệu chỉnh — hỏi bác sĩ nhi. Mất một kỹ năng đã có thì đi khám, đừng chờ mốc sau.",
       },
       {
-        text: "Nằm sấp khi thức và có người trông, vài phút mỗi lần, để tập ngẩng đầu. Ngủ vẫn phải ngửa.",
+        text: "Nằm sấp khi thức, có người trông, để tập ngẩng đầu. Ngủ vẫn ngửa.",
+        detail: "AAP: bắt đầu từ ngày về nhà, 2–3 lần một ngày, mỗi lần khoảng 3–5 phút, tăng dần nếu bé chịu. Cách làm và lúc bé ghét nằm ở trang Nằm sấp khi thức.",
       },
       {
         text: "Nói, hát, và đáp lại tiếng bé. Chưa cần đồ chơi phát sáng. CDC không khuyên màn hình cho trẻ dưới 2 tuổi, trừ gọi video cho người thân.",
@@ -806,7 +807,7 @@ export const lessons = [
     when: "Cả năm đầu",
     body: [
       "Bé học bằng mặt người, giọng nói, và đồ vật thật. Gọi tên đồ khi bé nhìn. Đáp lại tiếng bập bẹ. Hát một bài hát đi tắm cũng đủ.",
-      "Nằm sấp khi thức, có người trông. Sàn nhà an toàn hơn ghế nhún dùng cả buổi.",
+      "Nằm sấp khi thức, có người trông, từ ngày về nhà. Sàn hoặc ngực người lớn đều được. Ngủ vẫn ngửa. Trang Nằm sấp khi thức có số phút và cách làm khi bé ghét.",
       "Màn hình không được CDC khuyên cho trẻ dưới 2 tuổi, ngoài gọi video. Người lớn cũng nên đặt điện thoại xuống trong lúc bú nếu có thể — không phải để hoàn hảo, mà để thấy dấu hiệu no và mệt.",
       "Mốc phát triển trên các trang chặng là việc hầu hết trẻ làm được, lấy từ checklist CDC. Không dùng để so với con bạn bè. Dùng để biết khi nào mang câu hỏi đến bác sĩ.",
     ],
@@ -957,6 +958,11 @@ export const sources = [
     title: "CDC — Newborn breastfeeding basics",
     href: "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/newborn-basics.html",
     note: "8–12 cữ bú trong 24 giờ, về cân lúc sinh vào ngày 10–14, ngưỡng tã ở ngày 5, dấu hiệu ngậm.",
+  },
+  {
+    title: "AAP — Back to Sleep, Tummy to Play",
+    href: "https://www.healthychildren.org/English/ages-stages/baby/sleep/pages/Back-to-Sleep-Tummy-to-Play.aspx",
+    note: "Nằm sấp khi thức, có người trông, từ ngày về nhà. Ngủ vẫn ngửa. Số phút trong trang Nằm sấp khi thức lấy từ đây.",
   },
   {
     title: "AAP — How to tell if your breastfed baby is getting enough milk",

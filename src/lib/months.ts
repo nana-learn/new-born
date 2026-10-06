@@ -13,14 +13,14 @@ export const months: MonthNote[] = [
     month: 1,
     title: "Bú, tã, giấy tờ",
     now: "Chưa có nhịp ngày. Có bú 8–12 lần trong 24 giờ, ngủ ngửa, và theo dõi vàng da. Sữa non ít là bình thường nếu tã và cân được theo dõi.",
-    tasks: ["Hỏi viêm gan B, vitamin K, và hẹn lao.", "Khai sinh trước ngày 60.", "Một người trực đêm, người kia ngủ."],
+    tasks: ["Hỏi viêm gan B, vitamin K, và hẹn lao.", "Khai sinh trước ngày 60.", "Nằm sấp khi thức, vài phút, có người trông. Rốn chưa rụng thì nằm trên ngực người lớn."],
     leave: "Khóc chiều chưa phải hết sữa. Sốt, bú kém, hoặc vàng trong ngày đầu thì không chờ hết tháng.",
   },
   {
     month: 2,
     title: "Mũi đầu của lịch dày",
     now: "Đủ 2 tháng là cửa tiêm phối hợp, bại liệt uống, và rota. Bé có thể bắt đầu nhìn mặt lâu hơn và phát tiếng khác khóc. Vẫn chỉ sữa.",
-    tasks: ["Đặt lịch trạm, mang sổ.", "Ghi tên mũi trước khi về.", "Nằm sấp vài phút khi thức, có người trông."],
+    tasks: ["Đặt lịch trạm, mang sổ.", "Ghi tên mũi trước khi về.", "Tiếp tục nằm sấp khi thức. Nếu bé chịu, cộng các lần ngắn lại, không cần một lần dài."],
     leave: "Chưa cần bột để bé ngủ đêm. Sốt cao sau tiêm thì đi, không tự cho thuốc người lớn.",
   },
   {

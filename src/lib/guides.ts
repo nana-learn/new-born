@@ -329,7 +329,7 @@ export const guides: Guide[] = [
       {
         heading: "2–4 tháng",
         paragraphs: [
-          "Cữ thức dài hơn một chút. Nằm sấp khi thức, có người trông, vài phút. Ngủ vẫn ngửa. Bé có thể cười khi được cười lại. Vẫn chỉ sữa mẹ hoặc sữa công thức.",
+          "Cữ thức dài hơn một chút. Vẫn nằm sấp khi thức, có người trông. Bé ghét thì nằm trên ngực người lớn thay vì sàn. Ngủ vẫn ngửa. Bé có thể cười khi được cười lại. Vẫn chỉ sữa mẹ hoặc sữa công thức.",
           "Lịch tiêm tháng 2, 3, 4 chiếm vài buổi. Ghi sốt và quấy sau tiêm. Đêm sau tiêm có thể vỡ nhịp. Nhịp sẽ về, không cần sửa bằng bột.",
         ],
       },
@@ -483,6 +483,52 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: "nam-sap",
+    title: "Nằm sấp khi thức",
+    when: "Từ ngày về nhà, vài phút mỗi lần",
+    lede: "Ngủ thì ngửa. Thức thì cho bé nằm sấp có người trông, để cổ và vai có việc phải làm. Đây không phải bài tập phải đủ phút.",
+    sections: [
+      {
+        heading: "Bắt đầu lúc nào",
+        paragraphs: [
+          "AAP khuyên bắt đầu từ ngày về nhà, khi bé đang thức. Không chờ rốn rụng mới được tập. Trước khi rốn rụng, cho bé nằm sấp trên ngực người lớn thì rốn không bị đè xuống sàn.",
+          "Bé sinh non hoặc còn yếu: hỏi bác sĩ nhi trước, và tính tuổi theo ngày đáng lẽ sinh nếu họ bảo vậy.",
+        ],
+      },
+      {
+        heading: "Bao lâu",
+        paragraphs: [
+          "AAP: 2–3 lần một ngày, mỗi lần khoảng 3–5 phút lúc mới về. Tăng dần nếu bé chịu. Đến khoảng 7 tuần tuổi, nhiều nhà tập được tổng 15–30 phút một ngày, cộng các lần ngắn, không phải một lần dài.",
+          "Bé quấy thì dừng. Vài phút xong vẫn tính. Không giữ đến đủ số vì thấy bài viết bảo vậy.",
+        ],
+      },
+      {
+        heading: "Làm thế nào",
+        bullets: [
+          "Sau khi thay tã, hoặc vừa thức dậy, lúc bé tỉnh và không vừa bú no.",
+          "Sàn cứng có thảm mỏng, hoặc ngực người lớn. Người lớn nằm ngửa, bé nằm sấp trên ngực, mặt nhìn mặt mình.",
+          "Một tay luôn ở gần. Không quay đi lấy điện thoại.",
+          "Nói chuyện, để mặt hoặc đồ chơi trong tầm mắt. Bé lớn hơn thì để đồ hơi xa để bé với.",
+          "Đỡ ngực hoặc vai nếu bé còn dúi mặt xuống và chưa ngẩng được. Không kê gối dưới bụng.",
+        ],
+      },
+      {
+        heading: "Nếu bé ghét",
+        paragraphs: [
+          "Nhiều bé ghét những lần đầu. Rút ngắn, đổi sang nằm trên ngực, thử lại sau giấc ngủ. Không phải bé ghét là cổ yếu.",
+          "CDC nói hầu hết bé 2 tháng ngẩng được đầu khi nằm sấp. Đó là việc khoảng 75% trẻ làm được, không phải hạn. Bé không ngẩng, hoặc trước đây ngẩng được mà nay không: hỏi bác sĩ nhi.",
+        ],
+      },
+      {
+        heading: "Ngủ vẫn ngửa",
+        paragraphs: [
+          "Buồn ngủ giữa chừng thì bế lên và đặt ngửa vào nôi trống. Nằm sấp khi ngủ, kể cả ngủ gật trên thảm, không phải tummy time.",
+          "Ít thời gian nằm ngửa trên một chỗ cũng giúp đỡ bị bẹt đầu. Bế, địu đúng cách, và nằm sấp khi thức đều tính. Không dùng gối chống méo đầu.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "bom-sua",
     title: "Bế, vỗ hơi, và bú dồn",
     when: "Tuần đầu, nhất là buổi tối",
@@ -624,8 +670,8 @@ export const phaseGuideSlugs: Record<string, string[]> = {
   "tuan-29-32": ["ke-hoach-sinh", "nguoi-ho-tro", "nha-an-toan"],
   "tuan-33-36": ["chuyen-da", "ke-hoach-sinh", "xuat-vien", "o-cu"],
   "tuan-37-40": ["chuyen-da", "xuat-vien", "nguoi-ho-tro", "me-hoi-phuc"],
-  "thang-dau": ["bom-sua", "khoc", "bay-ngay-dau", "cho-bu", "tam-ta", "khi-om", "xuat-vien", "giay-to", "o-cu"],
-  "thang-1-3": ["khoc", "cho-bu", "tam-ta", "khi-om", "mot-ngay", "me-hoi-phuc"],
+  "thang-dau": ["nam-sap", "bom-sua", "khoc", "bay-ngay-dau", "cho-bu", "tam-ta", "khi-om", "xuat-vien", "giay-to", "o-cu"],
+  "thang-1-3": ["nam-sap", "khoc", "cho-bu", "tam-ta", "khi-om", "mot-ngay", "me-hoi-phuc"],
   "thang-3-6": ["khi-om", "mot-ngay", "nha-an-toan"],
   "thang-6-9": ["an-dam", "khi-om", "mot-ngay", "nha-an-toan"],
   "thang-9-12": ["an-dam", "khi-om", "mot-ngay", "nha-an-toan"],
